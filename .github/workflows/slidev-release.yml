@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set Node.js version
         uses: actions/setup-node@v3
@@ -34,7 +34,7 @@ jobs:
 
 
       - name: Upload Exported Files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: slidev-exports
           path: outputs/*
