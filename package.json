@@ -5,12 +5,19 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "export_pdf": "slidev export --per-slide --format pdf  --output outputs/presentation.pdf",
+    "export_pdf_dark": "slidev export --per-slide --format pdf --dark --output outputs/presentation-dark.pdf",
+    "export_pptx": "slidev export --per-slide --format pptx  --output outputs/presentation-pptx.pptx",
+    "export_pptx_dark": "slidev export --per-slide --format pptx --dark --output outputs/presentation-pptx-dark.pptx"
   },
   "dependencies": {
     "@slidev/cli": "^51.4.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.51.1"
   }
 }

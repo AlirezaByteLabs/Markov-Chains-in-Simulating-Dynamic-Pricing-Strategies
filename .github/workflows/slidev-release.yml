@@ -1,0 +1,40 @@
+name: Slidev Export and Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  export_and_release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: |
+          pnpm install
+          pnpm exec playwright install chromium
+
+      - name: Create Outputs Directory (if needed)
+        run: mkdir -p outputs
+
+      - name: Run Slidev Exports
+        run: |
+          pnpm run export_pdf
+          pnpm run export_pdf_dark
+          pnpm run export_pptx
+          pnpm run export_pptx_dark
+
+
+      - name: Upload Exported Files
+        uses: actions/upload-artifact@v3
+        with:
+          name: slidev-exports
+          path: outputs/*
