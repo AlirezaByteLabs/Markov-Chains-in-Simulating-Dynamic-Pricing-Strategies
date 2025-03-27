@@ -39,9 +39,12 @@ jobs:
           pnpm run export_pptx
           pnpm run export_pptx_dark
 
-
-      - name: Upload Exported Files
-        uses: actions/upload-artifact@v4.6.2
+      - name: Release
+        uses: softprops/action-gh-release@v2
         with:
-          name: slidev-exports
-          path: outputs/*
+          files: |
+            outputs/presentation.pdf
+            outputs/presentation-dark.pdf
+            outputs/presentation-pptx.pptx
+            outputs/presentation-pptx-dark.pptx
+
