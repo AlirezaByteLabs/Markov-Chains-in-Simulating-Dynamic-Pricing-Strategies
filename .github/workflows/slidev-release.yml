@@ -36,8 +36,6 @@ jobs:
         run: |
           pnpm run export_pdf
           pnpm run export_pdf_dark
-          pnpm run export_pptx
-          pnpm run export_pptx_dark
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -45,6 +43,3 @@ jobs:
           files: |
             outputs/presentation.pdf
             outputs/presentation-dark.pdf
-            outputs/presentation-pptx.pptx
-            outputs/presentation-pptx-dark.pptx
-
