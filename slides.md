@@ -43,6 +43,26 @@ ancillary: خذمات جانبی
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 ---
+dir: rtl
+transition: fade-out
+---
+
+# موضوعات مورد بحث
+کامل شود با فرمت لیست
+
+
+---
+transition: zoom
+---
+
+<h1 dir="rtl">
+منابع
+</h1>
+
+- Dynamic offer creation for airline ancillaries using a Markov chain choice model, Kevin K. Wang, 2023
+
+
+---
 layout: center
 class: text-center
 ---
