@@ -5,7 +5,7 @@ theme: Seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: ./assets/cover_bg.webp
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: ارائه درس شبیه سازی
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
