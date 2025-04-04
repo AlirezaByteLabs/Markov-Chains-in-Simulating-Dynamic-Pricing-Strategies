@@ -20,8 +20,11 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+dir: rtl
 addons:
   - slidev-addon-rabbit
+  - slidev-addon-graph
+
 rabbit:
   slideNum: true
 ---
@@ -50,9 +53,17 @@ transition: fade-out
 # موضوعات مورد بحث
 کامل شود با فرمت لیست
 
+---
+transition: fade-out
+---
+
+# صورت مسئله
+
+
+
 
 ---
-transition: zoom
+transition: fade
 ---
 
 <h1 dir="rtl">
