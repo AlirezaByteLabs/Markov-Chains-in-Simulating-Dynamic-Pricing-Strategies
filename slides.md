@@ -23,7 +23,6 @@ mdc: true
 dir: rtl
 addons:
   - slidev-addon-rabbit
-  - slidev-addon-graph
 
 rabbit:
   slideNum: true
@@ -55,9 +54,13 @@ transition: fade-out
 
 ---
 transition: fade-out
+dir: rtl
 ---
 
-# صورت مسئله
+# مقدمه
+- **هدف:** <br> بیشینه کردن درآمد ایرلاین
+- **چگونه؟** با بیشتر کردن فروش خدمات جانبی
+- 
 
 
 
