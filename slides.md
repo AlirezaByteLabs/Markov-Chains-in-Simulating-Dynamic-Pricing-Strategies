@@ -53,17 +53,63 @@ transition: fade-out
 کامل شود با فرمت لیست
 
 ---
-transition: fade-out
+layout: section
+---
+
+# تعاریف اولیه
+
+در این بخش به ارائه اصطلاحات  مورد استفاده در ارائه خواهیم پرداخت.
+
+
+---
 dir: rtl
 ---
 
+# تعاریف اولیه
+
+## Offer
+منظور از offer یک پیشنهاد برای خرید است که احتمالا با قیمت ارزان‌تر از قیمت مورد انتظار خواهد بود. یک پیشنهاد می‌تواند به صورت bundle(ترکیبی از چند محصول) یا تکی باشد.
+
+---
+layout: section
+---
+
 # مقدمه
-- **هدف:** <br> بیشینه کردن درآمد ایرلاین
-- **چگونه؟** با بیشتر کردن فروش خدمات جانبی
-- 
+
+در این بخش شروع به توضیح مسئله و تشریح آن می‌پردازیم.
+
+---
+transition: fade-out
+dir: rtl
+src: ./pages/introduction.rtl.md
+---
+
+some text
+
+---
+layout: fact
+dir: rtl
+---
+
+<strong>
+احتمال خرید یک پیشنهاد، فقط به قیمت اون پیشنهاد وابسته نیست. بلکه به قیمت <span data-id="customers-rights">سایر پیشنهادات</span> در سبد پیشنهادات برای مشتری نیز بستگی دارد
+</strong>
+
+<FancyArrow v-click="1" q1="[data-id=customers-rights]" pos1="left" q2="[data-id=customers-wrongs]" pos2="bottom" color="green" width="4" roughness="2" arc="0.3" seed="1" />
+
+<span v-click="1" data-id="customers-wrongs" class="redSpan">
+مشتری همیشه بین انتخاب‌های موجودش اونی رو انتخاب می‌کنه که به نفش خودش هست و ما باید مسئله رو جوری حل کنیم که بهترین انتخاب مشتری، سودمندترین هم برای فروشنده باشه.
+</span>
 
 
-
+<style>
+strong {
+  font-size: xx-large;
+}
+redSpan {
+  color: red;
+}
+</style>
 
 ---
 transition: fade
@@ -77,7 +123,6 @@ transition: fade
 
 
 ---
-layout: center
-class: text-center
+layout: end
 ---
 با تشکر از همراهی شما

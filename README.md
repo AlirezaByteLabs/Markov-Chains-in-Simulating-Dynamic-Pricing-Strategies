@@ -18,3 +18,8 @@ Builtin Transitions
 - **slide-up** - Slides to the top (slide to bottom when going backward)
 - **slide-down** - Slides to the bottom (slide to top when going backward)
 - **view-transition** - Via the view transitions API
+
+--------------------
+
+https://sli.dev/builtin/layouts
+

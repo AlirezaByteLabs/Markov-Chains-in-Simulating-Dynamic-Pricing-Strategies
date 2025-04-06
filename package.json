@@ -12,6 +12,7 @@
     "export_pptx_dark": "slidev export --per-slide --format pptx --dark --output outputs/presentation-pptx-dark.pptx"
   },
   "dependencies": {
+    "@iconify-json/uim": "^1.2.3",
     "@slidev/cli": "^51.4.0",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
