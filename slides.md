@@ -23,6 +23,7 @@ mdc: true
 dir: rtl
 addons:
   - slidev-addon-rabbit
+  - fancy-arrow
 
 rabbit:
   slideNum: true
@@ -89,18 +90,25 @@ some text
 ---
 layout: fact
 dir: rtl
+transition: slide-down
 ---
 
 <strong>
-احتمال خرید یک پیشنهاد، فقط به قیمت اون پیشنهاد وابسته نیست. بلکه به قیمت <span data-id="customers-rights">سایر پیشنهادات</span> در سبد پیشنهادات برای مشتری نیز بستگی دارد
+احتمال خرید یک پیشنهاد، فقط به قیمت اون پیشنهاد وابسته نیست. بلکه به قیمت <span data-id="customers-rights" v-mark.green="1">سایر پیشنهادات</span> در سبد پیشنهادات برای مشتری نیز بستگی دارد
 </strong>
 
-<FancyArrow v-click="1" q1="[data-id=customers-rights]" pos1="left" q2="[data-id=customers-wrongs]" pos2="bottom" color="green" width="4" roughness="2" arc="0.3" seed="1" />
+<FancyArrow v-click="2" q1="[data-id=customers-rights]" pos1="bottom" q2="[data-id=customers-wrongs]" head-size="30" pos2="top" color="teal" width="4" roughness="3" arc="0.1" seed="1" />
 
-<span v-click="1" data-id="customers-wrongs" class="redSpan">
-مشتری همیشه بین انتخاب‌های موجودش اونی رو انتخاب می‌کنه که به نفش خودش هست و ما باید مسئله رو جوری حل کنیم که بهترین انتخاب مشتری، سودمندترین هم برای فروشنده باشه.
+<br>
+<br>
+<br>
+
+<span v-click="2" color="red">
+<span data-id="customers-wrongs">
+مشتری 
 </span>
-
+همیشه بین انتخاب‌های موجودش اونی رو انتخاب می‌کنه که به نفش خودش هست و ما باید مسئله رو جوری حل کنیم که بهترین انتخاب مشتری، سودمندترین هم برای فروشنده باشه.
+</span>
 
 <style>
 strong {
