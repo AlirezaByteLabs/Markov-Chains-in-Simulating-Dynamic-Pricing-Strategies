@@ -304,6 +304,230 @@ $$\left|\Omega \right|={2}^{K}-1$$
 
 </div>
 
+---
+dir: rtl
+---
+
+# مجموعه پیشنهاد قیمت گذاری نشده چیست
+
+<br>
+
+<div dir="ltr">
+
+$$S=\left\{ {O}_{1},\dots ,{O}_{N}\right\}$$
+
+$$S\subseteq\Omega$$
+
+$$1\le N\le |\Omega |$$
+
+$$\mathrm{P}\left(\Omega \right)\backslash \left\{ \emptyset \right\}$$
+
+$${O}_{0}=\emptyset$$
+
+$$S\cup \left\{ {O}_{0}\right\}=\left\{ {O}_{0},{O}_{1},\dots ,{O}_{N}\right\}$$
+
+</div>
+
+---
+dir: rtl
+---
+
+# مجموعه پیشنهاد قسمت گذاری شده
+
+<br>
+
+فرض کنید $S$ یک مجموعه پیشنهاد قیمت گذاری نشده باشد.
+
+<div dir="ltr">
+
+$$ {\mathbf{p}}\left(S\right)=\left({p}_{1}(S),\dots ,{p}_{N}(S) \right) $$
+
+$${p}_{i}\left(S\right)={p}_{i}={ {p}_{O_{i}}}$$
+
+$${p}_{0}(S)=0$$
+
+</div>
+
+---
+dir: rtl
+---
+
+# یک مثال
+
+<div dir="ltr">
+
+$$K=3$$
+
+$$\mathcal{A}=\left\{\mathrm{1,2},3\right\}$$
+
+$$\Omega =\mathrm{P}\left(\mathcal{A}\right)\backslash \left\{ \emptyset \right\}$$
+
+$$\left|\Omega \right|=7$$
+
+$$\Omega =\left\{ {O}_{1},{O}_{2},{O}_{3},{O}_{4},{O}_{5},{O}_{6},{O}_{7}\right\}=\left\{\left\{1\right\}, \left\{2\right\}, \left\{3\right\},\left\{\mathrm{1,2}\right\},\left\{\mathrm{1,3}\right\}, \left\{\mathrm{2,3}\right\}, \left\{\mathrm{1,2},3\right\}\right\}$$
+
+$${S}_{1}=\left\{\left\{1\right\}, \left\{2\right\}, \left\{\mathrm{1,2},3\right\}\right\}$$
+
+$${S}_{2}= \left\{\left\{1\right\}, \left\{3\right\},\left\{\mathrm{1,2},3\right\}\right\}$$
+
+$$S=\Omega \text{ , S isfull offer set}$$
+
+</div>
+
+---
+dir: rtl
+---
+
+# تعریف تابع هدف بهینه سازی
+
+<br>
+
+### یک فرض مهم
+فرض می‌کنیم مشتری فقط یک پیشنهاد را برای خرید انتخاب می‌کند
+
+
+<div dir="ltr">
+
+$$\left\{\left\{1\right\},\left\{2\right\}\right\} \implies \left\{\left\{1\right\},\left\{2\right\},\{\mathrm{1,2}\}\right\}$$
+
+</div>
+
+### مدل انتخاب گسسته
+
+<div dir="ltr">
+
+$$\mathcal{P}\left({O}_{i}|S,{\mathbf{p}}\left(S\right)\right)$$
+
+</div>
+
+این تابع مشخص کننده احتمال خرید محصول 
+<span dir="ltr">
+${O}_{i}$
+</span>
+در بین 
+<span dir="ltr">
+$S=\left\{ {O}_{1},\dots ,{O}_{N}\right\}$
+</span>
+
+### تابع هدف درامد مورد انتظار
+
+<div dir="ltr">
+
+$$\begin{array}{c}\pi \left(S, {\mathbf{p}}\left(S\right)\right)=\sum\limits_{i=1}^{N}\left({p}_{i}-{c}_{i}\right)\mathcal{P}\left({O}_{i}|S, {\mathbf{p}}\left(S\right)\right)\end{array}$$
+
+</div>
+
+---
+dir: rtl
+---
+
+# مقدار تابع احتمال خرید پیشنهاد
+
+<br>
+
+احتمال خرید یک پیشنهاد از مجموع پیشنهادات برابر تعداد دفعاتی است که آن محصول دیده‌می‌شود.
+
+<div dir="ltr">
+
+$$\mathcal{P}(O_i|S, \bm{p}(S)) = v_i(\bm{p}(S)) \theta_i(p_i)$$
+
+</div>
+
+<br>
+
+که با توجه به پارامتر‌های تایین می‌توان مقدار $v_i$ را تعیین نمود.
+
+<div dir="ltr">
+
+$$v_i(\bm{p}(S)) = \lambda_i + \sum_{j=1,\dots,N} \rho_{ji} (1 - \theta_j(p_j)) v_j(\bm{p}(S))$$
+
+</div>
+
+---
+dir: rtl
+---
+
+# بهینه سازی روی تابع هدف
+
+<br>
+
+<div dir="ltr">
+
+$$\begin{array}{c}\pi \left(S, {\mathbf{p}}\left(S\right)\right)=\sum\limits_{i=1}^{N}\left({p}_{i}-{c}_{i}\right)\mathcal{P}\left({O}_{i}|S, {\mathbf{p}}\left(S\right)\right)\end{array}$$
+
+</div>
+
+### بهینه سازی این تابع به ۲ عامل بستگی دارد:
+<br>
+
+#### قیمت اعلام شده برای پیشنهاد
+ورودی: $S$ یک مجموعه بدون قیمت است.
+<div dir="ltr">
+
+$${ {\mathbf{p} } }^{\boldsymbol{*} }\left(S\right)={\mathrm{argmax} }_{ {\mathbf{p} } }\pi \left(S,{\mathbf{p} }\left(S\right)\right)$$
+
+</div>
+
+
+#### انتخاب مجموعه پیشنهادها
+ورودی: <span dir="ltr"> ${\mathbf{p}}\left(S\right)$, $S\subseteq\Omega$ </span>
+
+<div dir="ltr">
+
+$$S^*={\mathrm{argmax} }_{S\subseteq \Omega }\pi \left(S,{\mathbf{p} }\left(S\right)\right)$$
+
+</div>
+
+---
+dir: rtl
+layout: fact
+---
+
+مسئله‌ قیمت‌گذاری و انتخاب مجموعه پیشنهادها به <span v-mark.red="0">صورت ترکیبی</span>، پیچیدگی جدیدی ایجاد نمی‌کند و این ۲ مسئله را به صورت جست و جوی جامع حل می‌کنیم. به عبارت دیگر برای همه مجموعه پیشنها‌های ممکن به دنبال قیمت بهینه می‌گردیم و مواردی را انتخاب می‌کنیم که بهتر سود را داشته باشد.
+
+
+---
+dir: rtl
+---
+
+# ویژگی‌های مهم
+
+
+- ویژگی‌های مدل انتخاب گسسته <span dir="ltr"> $\mathcal{P}\left({O}_{i}|S, {\mathbf{p}}\left(S\right)\right)$ </span>
+
+  - **مقیاس‌پذیر:**  
+    احتمالات خرید حتی برای مجموعه‌های پیشنهادی بزرگ نیز قابل محاسبه هستند.
+
+  - **قابل سفارشی‌سازی:**  
+    مجموعه پیشنهادها را می‌توان متناسب با هر مشتری تنظیم کرد.
+
+  - **قابل تفسیر:**  
+    یک مدل پارامتری انتخاب گسسته که امکان تفسیر نتایج را فراهم می‌کند.
+
+  - **قابل برآورد:**  
+    پارامترهای مدل را می‌توان از داده‌های آموزشی تخمین زد.
+
+  - **قابل مدیریت:**  
+    حتی برای مجموعه‌های پیشنهادی بزرگ، می‌توان قیمت‌های بهینه برای حداکثر سود یا بهترین مجموعه پیشنهادی را به راحتی تعیین کرد.
+
+
+---
+dir: rtl
+---
+
+# ویژگی‌های مهم
+
+
+- قیمت منطقی
+
+<div dir="ltr">
+
+$$S = \left\{\left\{1\right\},\left\{2\right\},\{\mathrm{1,2}\}\right\}$$
+
+$$\mathrm{max}({p}_{\left\{1\right\}},{p}_{\left\{2\right\}}) \le {p}_{\left\{\mathrm{1,2}\right\}} \le {p}_{\left\{1\right\}}+{p}_{\left\{2\right\}}$$
+
+</div>
+
 
 ---
 layout: section
@@ -313,6 +537,101 @@ dir: rtl
 # چگونگی عملکرد MCCM
 
 مزیت MCCM: احتمال خرید باندل‌های غیر سودآور را ضعیف کرده و مشتریان را به خرید پیشنهادات سودآور هدایت می‌کند.
+
+---
+dir: rtl
+---
+
+# شیوه عملکرد زنجیر‌های مارکوفی
+
+<img src="./assets/markov_chain.png" style="height: 85%; width: auto; margin:auto;"/>
+
+---
+dir: rtl
+---
+
+# بهینه‌کردن قیمت
+به کمک فراید تصمیم گیری مارکوفی
+
+## مفاهیم مورد نیاز
+
+<br>
+
+تعریف فرمال یک مسئله بهینه سازی
+<div dir="ltr">
+
+$$\left(\mathcal{S},\mathcal{A},\mathcal{R},\mathcal{P}\right)$$
+
+</div>
+
+- مجموعه حالات ممکن <span dir="ltr"> $\mathcal{S}=S\cup \{ {O}_{0},T\}$, $S=\left\{ {O}_{1},\dots ,{O}_{N}\right\}\subseteq\Omega$ </span> 
+- مجموعه قیمت‌های ممکن <span dir="ltr"> $\mathcal{A}={\mathbb{R} }_{+}$</span> 
+-  درامد حاصل <span dir="ltr"> $\mathcal{R}(O_i,p_i,s') = (p_i-c_i)\cdot\mathbb{I}_{s'=T}$ </span>
+- احتمال رفتن از s به 's
+    <span dir="ltr"> $\mathcal{P}(O_i, p_i, s') = 
+\begin{cases} 
+\theta_i(p_i) & \text{if } s' = T \\
+(1 - \theta_i(p_i)) \rho_{ij} & \text{if } s' = O_j \\
+(1 - \theta_i(p_i))(1 - \sum_{j>0} \rho_{ij}) & \text{if } s' = O_0 
+\end{cases}$ </span> 
+---
+dir: rtl
+---
+
+# بهینه‌کردن قیمت
+به کمک فراید تصمیم گیری مارکوفی
+
+## تابع هدف بهینه سازی
+
+<div dir="ltr">
+
+$$V^*(s) = \max_{\bm{p}} \sum_{s' \in \mathcal{S}} \mathcal{P}(s, \bm{p}, s') \big[ \mathcal{R}(s, \bm{p}, s') + V^*(s') \big]$$
+
+</div>
+
+که <span dir="ltr">$V^*(s)$</span> نشان دهنده درامد بهینه است.
+
+<br>
+
+که این تابع دارای شرایط تابع بلمن است که به صورت زیر حل می‌شود.
+
+
+<div dir="ltr">
+
+$$V_{k+1}(s) = \max_{\bm{p}} \sum_{s' \in \mathcal{S}} \mathcal{P}(s, \bm{p}, s') \left[ \mathcal{R}(s, \bm{p}, s') + V_k(s') \right]$$
+
+</div>
+
+با توجه به داشتن شرایط تابع بلمن این تابع با هر حدس اولیه‌ای همگرا خواهد بود. (مبلغ آغازین مهم نیست)
+
+
+---
+dir: ltr
+layout: fact
+---
+
+
+$$\bm{p}^*(s) = \arg\max_{\bm{p}} V^*(s)$$
+
+---
+dir: rtl
+---
+
+# افراز مشتریان
+
+برای اینکه بتوانیم با توجه به موضوع سفر پیشنهادات مناسب ارايه دهیم مشتریان را به l دسته افراز می‌کنیم.
+
+<div dir="ltr">
+
+$$\theta_{i,l}(p) = \left( \prod_{a \in O_i} \phi_{a,l} \right) \left( 1 - \Phi \left( \frac{p_i - \mu_{O_i,l}}{\sigma_{O_i,l}} \right) \right)$$
+
+$$\theta_{i}(p_i) = \sum_{l=1}^{L} w_l \theta_{i,l}(p_i)$$
+
+</div>
+
+- که در آن Φ(𝑥) تابع توزیع تجمعی (CDF) متغیر نرمال استاندارد 𝑁(0,1) است.
+- <span dir="ltr">$\phi_{a,l}$</span> نشان دهده ارتباط خدمات جانبی $i$ به افراز $l$ام است.
+
 
 ---
 layout: center
