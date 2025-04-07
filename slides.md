@@ -45,17 +45,12 @@ ancillary: خذمات جانبی
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
----
-dir: rtl
-transition: fade-out
----
-
-# موضوعات مورد بحث
-کامل شود با فرمت لیست
 
 ---
 layout: section
+dir: rtl
 ---
+
 
 # تعاریف اولیه
 
@@ -66,10 +61,29 @@ layout: section
 dir: rtl
 ---
 
+
 # تعاریف اولیه
 
-## Offer
-منظور از offer یک پیشنهاد برای خرید است که احتمالا با قیمت ارزان‌تر از قیمت مورد انتظار خواهد بود. یک پیشنهاد می‌تواند به صورت bundle(ترکیبی از چند محصول) یا تکی باشد.
+#### **1. تعریف پیشنهاد (Offer)**  
+- **معنی:** یک طرح تشویقی برای خرید با شرایط مطلوب (معمولاً قیمت پایین‌تر از حد انتظار).  
+- **هدف:** افزایش جذابیت خرید برای مشتری.  
+
+#### **2. انواع پیشنهادها**  
+- **🔹 پیشنهاد تکی (Single Offer):**  
+  - ارائه **یک محصول** با قیمت ویژه (مثال: تخفیف ۳۰٪ روی یک کالا).  
+- **🔹 پیشنهاد ترکیبی (Bundle Offer):**  
+  - مجموعه‌ای از چند محصول **با هم** با قیمت کاهش‌یافته (مثال: خرید گوشی + هدفون با ۲۰٪ تخفیف کل).  
+
+#### **3. مثال‌های کاربردی**  
+- **پیشنهاد تکی:**  
+  ```  
+  "لپ‌تاپ مدل X با ۱۵٪ تخفیف تا پایان هفته!"  
+  ```  
+- **پیشنهاد ترکیبی:**  
+  ```  
+  "پکیج ویژه: خرید دوربین + کارت حافظه ۱۲۸GB + کیف با ۲۵٪ تخفیف مجموع."  
+  ```  
+
 
 ---
 layout: section
@@ -257,7 +271,7 @@ layout: image
 
 # ساخت و قیمت گذاری آفر در یک نگاه
 
-<img src="./assets/product_offer_matrix.png" height="auto" />
+<img src="./assets/product_offer_matrix.png" style="height: 90%; width: auto; margin: auto;" />
 
 
 <style>
@@ -617,6 +631,7 @@ $$\bm{p}^*(s) = \arg\max_{\bm{p}} V^*(s)$$
 dir: rtl
 ---
 
+
 # افراز مشتریان
 
 برای اینکه بتوانیم با توجه به موضوع سفر پیشنهادات مناسب ارايه دهیم مشتریان را به l دسته افراز می‌کنیم.
@@ -635,7 +650,9 @@ $$\theta_{i}(p_i) = \sum_{l=1}^{L} w_l \theta_{i,l}(p_i)$$
 
 ---
 layout: center
+dir: ltr
 ---
+
 
 # Results and Performance
 
