@@ -255,7 +255,7 @@ dir: rtl
 layout: image
 ---
 
-# وضعیت ساخت آفر در یک نگاه
+# ساخت و قیمت گذاری آفر در یک نگاه
 
 <img src="./assets/product_offer_matrix.png" height="auto" />
 
@@ -277,15 +277,33 @@ dir: rtl
 
 # فرمول‌سازی مسئله
 
-یک پیشنهاد مجموعه‌ای از محصولات که با یک قیمت واحد به فروش می‌رسند.
+یک پیشنهاد ۲ بخش دارد مجمو‌عه‌ای ناتهی از محصولات و یک قیمت .
 
 ---
 dir: rtl
 ---
 
 # یک پیشنهاد چیست
+<br>
 
-فرض کنید یک ایرلاین $ k $ محصول اتومیک دارد.
+فرض کنید یک ایرلاین 
+$k$ 
+محصول اتومیک دارد.
+
+<div dir="ltr">
+
+$$A = \{1,2, \cdots , k\}$$
+
+$$a=1,\dots ,K$$
+
+$$O\subseteq \mathcal{A}$$
+
+$$\Omega =\mathrm{P}\left(\mathcal{A}\right)\backslash \left\{ \emptyset \right\}$$
+
+$$\left|\Omega \right|={2}^{K}-1$$
+
+</div>
+
 
 ---
 layout: section
