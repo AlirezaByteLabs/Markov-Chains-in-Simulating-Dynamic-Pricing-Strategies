@@ -297,6 +297,144 @@ dir: rtl
 مزیت MCCM: احتمال خرید باندل‌های غیر سودآور را ضعیف کرده و مشتریان را به خرید پیشنهادات سودآور هدایت می‌کند.
 
 ---
+layout: center
+---
+
+# Results and Performance
+
+we implement a simple model in a hypothetical market wit 2 customer segments to test if our model reaches our desirable result
+
+---
+layout: default
+---
+
+# Setup
+setting assumptions for our experiment
+
+- Airline offers 3 ancillary sevices $\mathcal{A} = \{1,2,3\}$ which are in order bag, seat, and meal
+- Customers are equally divided into two segments
+  - Leisure travelers
+  - Bussiness travelers
+- We assume the default parameters are as the ones shown in the next table
+- Arrival and transition probabilities are uniform
+
+---
+layout: center
+---
+
+![](./assets/default_parameters.png)
+
+---
+layout: default
+---
+
+# Scenarios
+what our models look like
+
+**Offer set selection**
+- no offer set selection
+- unsegmented offer set selection
+- segmented offer set selection
+
+**Offer set pricing**
+- myopic la carte pricing
+- unsegmented pricing
+- segmented pricing
+
+---
+layout: default
+---
+
+# Baseline pricing (myopic)
+our base model
+
+3 key assumptions:
+- the airline knows the true customer valuation distribution for each ancillary service
+- the price for each ancillary is optimized myopically without considering other offers in the offerset
+- no bundle discount
+the formula for the optimal price for each ancillary service is
+$p_a^* = \operatorname{Argmax}_{p_a} \left( 1 - \Phi \left( \frac{p_a - \mu_a}{\sigma_a} \right) \right) (p_a - c_a)$
+and the price of each bundle is the sum of included ancillary services' prices $p(0) = \sum_{a \in 0} p_a^*$
+
+Myopic gives a baseline pricing for ailines considering some limitatians they can face
+
+![](./assets/myopic_results.png){style="scale: 0.7;"}
+
+---
+layout: default
+---
+
+# Full offerset selection, Unsegmented pricing
+basic MCCM implemetation
+
+we now implement our MCCM and here the segments are again only diffrent in relevancy
+we can observe that the prices are higher on MCCM compared to myopic specially in single ancillary offers in order to insentivise customers to buy bundles at a discount. even tho the total ancillary purchase rate decreases in our model but the expected revenue per customer increases
+
+![](./assets/unsegmccm_results.png){style="scale: 0.8;"}
+
+---
+layout: default
+---
+
+# Sensitivity analysis
+testing how sensitive MCCM is to input parameters
+
+in the table provided in next page we'll see how our result changes based on shifting 3 parameters one at a time each time
+- **Cost of provision**: we increase the cost of all 3 ancillaries equally from 0 to 30. the prices increase non linearly in both models and the probability of purchase drops. under more ideal conditions MCCM outperforms myopic by a good margin but under less ideal conditions they have similar results
+- **Relevance**: relevance shifts from 10 to 100. since bundle relevance is sirect product of ancillary relevances low relevance means bundles are less attractive but high relevance makes bundles highly attractive
+- **Transition probability**: transition probabilty shifts from 0 to 16 percent, so the transition from any offer to no purchase decreases from 100 to 4. as probabilty of no purchase decreases the MCCM becomes alot more profitable
+as we can see not only is MCCM scalable and customizable but also bundle prices remain logical and robust
+
+---
+layout: center
+---
+
+# Sensitivity graphs
+sensitivity testing results
+
+![](./assets/sensitivity.png){style="scale: 0.8;"}
+
+---
+layout: default
+---
+
+# Unsegmented offerset selection, Unsegmented pricing
+optimal offerset selection for unsegmented pricing
+
+we systematicaly evaluate all 127 possible $S \subset \Omega$ for each set size |S| we find the S* = $\operatorname{argmax}_S \pi(S, p(S))$, the corresponding price p(s) and the expected purchase rates $\mathcal{P}(S)$ by customer segment.
+as we can see the optimal price of an offer changes depending on the offerset unlike myopic this is because MCCM takes into account the risk of no purchase and the potential buy up to a more profitable bundle. we can also see that removing unattractive offers reduces the risk of no purchase
+Another thing that we can take into account is the device the customer is using for example a mobile screen may only be able to show up to 3 offers so we have to limit ourselves to |S| $\leq$ 3 
+
+---
+layout: center
+---
+
+# UU Results
+all offerset selection results
+
+![](./assets/unsegprice.png){style="scale: 0.8;"}
+
+
+---
+layout: default
+---
+
+# Full/Segmented offerset selction, Segmented pricing
+
+for this scenarios we run 2 seperate MCCM models one for each segment
+
+![](./assets/segmccm_results.png){style="scale: 0.8;"}
+
+---
+layout: default
+---
+
+# Performance comparison
+
+as we look at the comparison of diffrent scenarios we can see that our model does infact offer an increase to the overall $\pi$*
+
+![](./assets/performance.png){style="scale: 0.8;"}
+---
 transition: fade
 ---
 
