@@ -642,6 +642,21 @@ layout: center
 we implement a simple model in a hypothetical market wit 2 customer segments to test if our model reaches our desirable result
 
 ---
+layout: section
+---
+
+# Sections
+
+- Setup
+- Scenarios
+- Baseline pricing 
+- Full offerset selection, Unsegmented pricing
+- Sensitivity analysis
+- Unsegmented offerset selection, Unsegmented pricing
+- Full/Segmented offerset selction, Segmented pricing
+- Performance comparison
+
+---
 layout: default
 ---
 
