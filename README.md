@@ -1,25 +1,13 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# موضوع
 
-To start the slide show:
+۵۶ - استفاده از زنجیر‌های مارکوفی برای شبیه سازی استراتژی قیمت گذاری پوسا
 
-- `pnpm install`
-- `pnpm dev`
-- visit <http://localhost:3030>
+# خلاصه
 
-Edit the [slides.md](./slides.md) to see the changes.
+در این ارائه با کمک زنجیر‌های مارکوفی استراژی قیمتگزاری پویا در صنعت هواپیمایی برسی شد.
 
-Learn more about Slidev at the [documentation](https://sli.dev/).
+----
 
-Builtin Transitions
-- **fade** - Crossfade in/out
-- **fade-out** - Fade out and then fade in
-- **slide-left** - Slides to the left (slide to right when going backward)
-- **slide-right** - Slides to the right (slide to left when going backward)
-- **slide-up** - Slides to the top (slide to bottom when going backward)
-- **slide-down** - Slides to the bottom (slide to top when going backward)
-- **view-transition** - Via the view transitions API
 
---------------------
-
-https://sli.dev/builtin/layouts
+ساخته شده با کمک [Slidev](https://github.com/slidevjs/slidev)
 
